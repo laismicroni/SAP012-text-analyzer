@@ -109,6 +109,8 @@ describe('CSS', () => {
       classRules.forEach((classRule) => {
         const elements = document.querySelectorAll(classRule);
         expect(elements.length).toBeUsedMoreThanOnce(classRule);
+
+       
       });
     });
   });
@@ -123,6 +125,7 @@ describe('CSS', () => {
           const liRules = getRulesForSelector(`.${liClass}`);
           const ulRulesAttributes = liRules[0].declarations.map((declaration) => declaration.property);
           allRulesAttributes = allRulesAttributes.concat(ulRulesAttributes);
+          
         });
       });
 

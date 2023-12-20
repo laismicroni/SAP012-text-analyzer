@@ -12,6 +12,15 @@ main {
   padding: 20px;
 }
 
+h1 {
+  color:rgb(14, 4, 19);
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: black;
+}
+
 textarea[name="user-input"] {
   width: 100%;
   height: 200px;
@@ -19,7 +28,13 @@ textarea[name="user-input"] {
   padding: 10px;
 }
 
-li[class] {
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 20px;
+}
+
+li {
   display: inline-block;
   width:auto;
   height:auto;
@@ -30,13 +45,15 @@ li[class] {
   background-color: #f2f2f2;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 20px;
+.teste {
+  background-color: #333;
 }
 
-#reset-button {
+button {
+  cursor: pointer;
+}
+
+button, #reset-button {
   padding: 10px 20px;
   background-color: #333;
   color: #fff;
