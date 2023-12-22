@@ -5,32 +5,31 @@ import analyzer from './analyzer.js';
 
 document.querySelector('textarea').addEventListener('input', () => {
     const text = document.querySelector('textarea').value;
-        const wordCount = analyzer.getWordCount(text);
-        document.querySelectorAll('.teste')[0].textContent = `Contagem de palavras: ${wordCount}`;
-        const characterCount = analyzer.getCharacterCount(text);
-        document.querySelectorAll('.teste')[1].textContent = `Contagem de caracteres: ${characterCount}`;
-        const characterNoSpacesCount = analyzer.getCharacterCountExcludingSpaces(text);
-        document.querySelectorAll('.teste')[2].textContent = `Caracteres sem espaços: ${characterNoSpacesCount}`;
-        const numberCount = analyzer.getNumberCount(text);
-        document.querySelectorAll('.teste')[3].textContent = `Números: ${numberCount}`;
-        const numberSum = analyzer.getNumberSum(text);
-        document.querySelectorAll('.teste')[4].textContent = `Soma de números: ${numberSum}`;
-        const wordLengthAverage = analyzer.getAverageWordLength(text);
-        document.querySelectorAll('.teste')[5].textContent = `Comprimento médio das palavras: ${wordLengthAverage}`;
+    const wordCount = analyzer.getWordCount(text);
+        document.querySelector('[data-testid="word-count"]').textContent = `Contagem de palavras: ${wordCount}`;
+    const characterCount = analyzer.getCharacterCount(text);
+        document.querySelector('[data-testid="character-count"]').textContent = `Contagem de caracteres: ${characterCount}`;
+    const characterNoSpacesCount = analyzer.getCharacterCountExcludingSpaces(text);
+        document.querySelector('[data-testid="character-no-spaces-count"]').textContent = `Caracteres sem espaços: ${characterNoSpacesCount}`;
+    const numberCount = analyzer.getNumberCount(text);
+        document.querySelector('[data-testid="number-count"]').textContent = `Números: ${numberCount}`;
+    const numberSum = analyzer.getNumberSum(text);
+        document.querySelector('[data-testid="number-sum"]').textContent = `Soma de números: ${numberSum}`;
+    const wordLengthAverage = analyzer.getAverageWordLength(text);
+        document.querySelector('[data-testid="word-length-average"]').textContent = `Comprimento médio das palavras: ${wordLengthAverage}`;
 })
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('reset-button');
     button.addEventListener('click', () => {
-        document.querySelectorAll('.teste')[0].textContent = 'Contagem de palavras: ';
-        document.querySelectorAll('.teste')[1].textContent = 'Contagem de caracteres: ';
-        document.querySelectorAll('.teste')[2].textContent = 'Caracteres sem espaços: ';
-        document.querySelectorAll('.teste')[3].textContent = 'Números: ';
-        document.querySelectorAll('.teste')[4].textContent = 'Soma de números: ';
-        document.querySelectorAll('.teste')[5].textContent = 'Comprimento médio das palavras: ';
+        document.querySelector('textarea').value = '';
+        document.querySelector('[data-testid="word-count"]').textContent = 'Contagem de palavras:';
+        document.querySelector('[data-testid="character-count"]').textContent = 'Contagem de caracteres:';
+        document.querySelector('[data-testid="character-no-spaces-count"]').textContent = 'Caracteres sem espaços:';
+        document.querySelector('[data-testid="number-count"]').textContent = 'Números:';
+        document.querySelector('[data-testid="number-sum"]').textContent = 'Soma de números:';
+        document.querySelector('[data-testid="word-length-average"]').textContent = 'Comprimento médio das palavras:';
     })
 })
-
-
-
     

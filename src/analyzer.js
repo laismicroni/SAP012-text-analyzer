@@ -15,13 +15,13 @@ const analyzer = {
   },
   getAverageWordLength: (text) => {    
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
-    let words = text.split(' ');
-    let sum = 0;
-    for (let i = 0; i < words.length; i++) {
-      sum += words[i].length;
+    const words = text.trim().split(' ');
+    const wordCount = words.length;
+    let wordLength = 0;
+    for (let i = 0; i < wordCount; i++) {
+      wordLength += words[i].length;
     }
-    return sum / words.length;
-    
+    return wordLength / wordCount;
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
