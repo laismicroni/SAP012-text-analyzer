@@ -21,7 +21,8 @@ const analyzer = {
     for (let i = 0; i < wordCount; i++) {
       wordLength += words[i].length;
     }
-    return wordLength / wordCount;
+    const averageWordLength = wordLength / wordCount;
+    return parseFloat(averageWordLength.toFixed(2));
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
