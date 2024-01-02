@@ -20,7 +20,8 @@ const analyzer = {
     for (let i = 0; i < words.length; i++) {
       totalLength += words[i].length;
     }
-    return parseFloat((totalLength / words.length).toFixed(2));
+    const averageLength = totalLength / words.length;
+    return parseFloat(averageLength.toFixed(2));
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
